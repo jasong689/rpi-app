@@ -13,9 +13,9 @@
     tools:showIn="@layout/app_bar_main"
     android:background="@color/colorPrimary">
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimaryDark"
-        android:text="Hello World!" />
+        android:src="@drawable/img_raspberry_pi"
+        android:layout_marginLeft="100dp"/>
 </RelativeLayout>
