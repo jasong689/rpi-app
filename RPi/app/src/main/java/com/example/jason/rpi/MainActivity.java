@@ -1,5 +1,6 @@
 package com.example.jason.rpi;
 
+import android.content.Intent;
 import android.graphics.Path;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -71,20 +72,21 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        Intent go = new Intent();
 
         if (id == R.id.nav_system) {
-            // Handle the camera action
+            go.setClass(this, SystemActivity.class);
         } else if (id == R.id.nav_mopidy) {
-
+            //go.setClass(this, MopidyActivity.class);
         } else if (id == R.id.nav_kodi) {
-
+            //go.setClass(this, KodiActivity.class);
         } else if (id == R.id.nav_settings) {
-
+            //go.setClass(this, SettingsActivity.class);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        item.setChecked(true);
         drawer.closeDrawer(GravityCompat.START);
+        startActivity(go);
         return true;
     }
 }
