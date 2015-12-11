@@ -25,6 +25,29 @@
         android:textOn="HDMI"
         android:textOff="Audio"
         android:textColor="@color/toggle_button"
-        android:background="@drawable/toggle_button"/>
+        android:background="@drawable/toggle_button"
+        android:id="@+id/audio_output"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Enable Auto"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/audio_output"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:switchMinWidth="60dp"
+        android:id="@+id/enable_auto"
+        android:layout_below="@+id/audio_output"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:trackTint="@android:color/black"
+        android:trackTintMode="src_over"
+        />
 
 </RelativeLayout>
