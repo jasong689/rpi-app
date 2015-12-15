@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/windowBackground">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:alpha="0.4"
+        android:background="@drawable/shadow"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/windowBackground"
+        android:baselineAligned="false"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linearLayout">
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/mopidy_album_small"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/black_border"
+            />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="200dp"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Song title"
+                android:id="@+id/mopidy_song_title"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Song Artist"
+                android:id="@+id/mopidy_song_artist"
+                android:layout_marginTop="5dp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:text=""
+            android:background="@drawable/play_black"
+            android:id="@+id/button"
+            style="?android:attr/borderlessButtonStyle"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

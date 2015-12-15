@@ -17,6 +17,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class SystemActivity extends Activity {
+    private final SystemModule module = new SystemModule(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,14 +46,12 @@ public class SystemActivity extends Activity {
     private void setAudioOutput(View v) {
         final ToggleButton button = (ToggleButton) v;
         if (!isOnline()) return;
-        HttpSystem handler = HttpSystem.getInstance(this);
 
         setAudioOutputAs(button.isChecked() ? "hdmi" : "analog");
     }
 
     private void setAudioOutputAs(String output) {
-        HttpSystem handler = HttpSystem.getInstance(this);
-        handler.setAudioOutput(output, new Response.Listener<JSONObject>() {
+        module.setAudioOutput(output, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 Log.w("System", response.toString());
@@ -81,11 +80,10 @@ public class SystemActivity extends Activity {
 
     private void setAudioOutputStatus() {
         if (!isOnline()) return;
-        HttpSystem handler = HttpSystem.getInstance(this);
         final ToggleButton button = (ToggleButton) findViewById(R.id.audio_output);
         final Switch autoSwitch = (Switch) findViewById(R.id.enable_auto);
 
-        handler.getAudioOutput(new Response.Listener<JSONObject>() {
+        module.getAudioOutput(new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {

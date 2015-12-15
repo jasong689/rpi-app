@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_system) {
             go.setClass(this, SystemActivity.class);
         } else if (id == R.id.nav_mopidy) {
-            //go.setClass(this, MopidyActivity.class);
+            go.setClass(this, MopidyActivity.class);
         } else if (id == R.id.nav_kodi) {
             //go.setClass(this, KodiActivity.class);
         } else if (id == R.id.nav_settings) {

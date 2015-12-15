@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_mopidy_gmusic"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Google Music" />
+        <item
+            android:id="@+id/nav_mopidy_playlists"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Playlists" />
+        <item
+            android:id="@+id/nav_mopidy_albums"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Albums" />
+    </group>
+
+</menu>
